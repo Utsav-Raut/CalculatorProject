@@ -14,5 +14,6 @@
     }
   %>
   <a href="<%= request.getRequestURI() %>"><h3>Try Again</h3></a>
+  <!--This is an example text that won't be displayed in the browser-->
 </body>
 </html>
