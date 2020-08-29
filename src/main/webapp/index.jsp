@@ -1,20 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head><title>First JSP</title></head>
-<body>
-  <%
-    double num = Math.random();
-    if (num > 0.95) {
-  %>
-      <h2>You'll have a luck day!</h2><p>(<%= num %>)</p>
-  <%
-    } else {
-  %>
-      <h2>Well, life goes on ... </h2><p>(<%= num %>)</p>
-  <%
-    }
-  %>
-  <a href="<%= request.getRequestURI() %>"><h3>Try Again</h3></a>
-  <!--This is an example text that won't be displayed in the browser-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>cal.ms.com</title>
+<body bgcolor="black">
+<form method="get" action="./CalculateServlet">
+Number 1 : <input type="text" name="Number 1"> <br>
+Number 2 : <input type="text" name="Number 2"> <br>
+
+<select name="opt">
+<option value="Addition"> + </option>
+<option value="Subtraction"> - </option>
+<option value="Multiplication"> * </option>
+<option value="Division"> / </option>
+</select>
+<br>
+<input type="submit" value="Go">
+</form>
 </body>
 </html>
-<!-- ADDING THIS COMMENT TODAY -->

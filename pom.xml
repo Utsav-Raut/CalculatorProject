@@ -5,11 +5,15 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>com.ms.calc Calc Webapp</name>
+  <url>http://cal.ms.com</url>
   
   <properties>
     <failOnMissingWebXml>false</failOnMissingWebXml>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sonar.language>java</sonar.language>
+    <sonar.host.url>http://localhost:9000</sonar.host.url>
+    <maven.compiler.source>1.6</maven.compiler.source>
+   	<maven.compiler.target>1.6</maven.compiler.target>
   </properties>
   
   <!-- https://mvnrepository.com/artifact/junit/junit -->
@@ -44,6 +48,23 @@
     				<format>xml</format>
     			</formats>
     		</configuration>
+  		</plugin>
+  		<plugin>	
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-war-plugin</artifactId>
+		    <version>2.6</version>	
+		    <configuration>
+		    	<archive>
+		    		<manifestEntries>
+		    			<version>${project.version}</version>
+		    		</manifestEntries>
+		    	</archive>
+		    </configuration>
+  		</plugin>
+  		<plugin>
+  			<groupId>org.sonarsource.scanner.maven</groupId>
+  			<artifactId>sonar-maven-plugin</artifactId>
+  			<version>3.2</version>
   		</plugin>
   	</plugins>
   </build>
