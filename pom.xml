@@ -69,11 +69,11 @@
   	</plugins>
   </build>
   	
-  <distributionManagement>
+  <!--  <distributionManagement>
   	<repository>
   		<id>artifactory</id>
   		<name>Calc_Dev_Snapshot</name>
   		<url>http://localhost:8081/artifactory/Calc_Dev_Snapshot</url>
   	</repository>
-  </distributionManagement>
+  </distributionManagement>-->
 </project>
