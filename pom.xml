@@ -5,7 +5,6 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>com.ms.calc Calc Webapp</name>
-  <url>http://cal.ms.com</url>
   
   <properties>
     <failOnMissingWebXml>false</failOnMissingWebXml>
@@ -69,11 +68,4 @@
   	</plugins>
   </build>
   	
-  <!--  <distributionManagement>
-  	<repository>
-  		<id>artifactory</id>
-  		<name>Calc_Dev_Snapshot</name>
-  		<url>http://localhost:8081/artifactory/Calc_Dev_Snapshot</url>
-  	</repository>
-  </distributionManagement>-->
 </project>
