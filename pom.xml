@@ -10,6 +10,7 @@
     <failOnMissingWebXml>false</failOnMissingWebXml>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sonar.language>java</sonar.language>
+    <sonar.host.url>http://localhost:9000</sonar.host.url>
     <maven.compiler.source>1.6</maven.compiler.source>
    	<maven.compiler.target>1.6</maven.compiler.target>
   </properties>
@@ -75,6 +76,13 @@
 		    <groupId>org.apache.maven.plugins</groupId>
 		    <artifactId>maven-war-plugin</artifactId>
 		    <version>2.6</version>
+		    <configuration>
+		    	<archive>
+		    		<manifestEntries>
+		    			<version>${project.version}</version>
+		    		</manifestEntries>
+		    	</archive>
+		    </configuration>
   		</plugin>
   		<plugin>
   			<groupId>org.sonarsource.scanner.maven</groupId>
@@ -91,5 +99,11 @@
   		
   	</plugins>
   </build>
-  	
+  <distributionManagement>
+  	<repository>
+  		<id>artifactory</id>
+  		<name>Calc_Dev_Snapshot</name>
+  		<url>http://localhost:8081/artifactory/Calc_Dev_Snapshot</url>
+  	</repository>
+  </distributionManagement>
 </project>
